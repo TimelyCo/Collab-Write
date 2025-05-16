@@ -1,4 +1,5 @@
-Project Title: CollabWrite – Real-Time Collaborative Writing Platform
+CollabWrite – Real-Time Collaborative Writing Platform
+
 Project Description:
 CollabWrite is a real-time collaborative writing platform designed to enable multiple users to write, edit, and review documents simultaneously. Inspired by platforms like Google Docs, CollabWrite integrates WebSocket-based live synchronization, user role management, and version control to streamline group editing and improve productivity.
 
