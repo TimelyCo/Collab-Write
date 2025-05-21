@@ -1,79 +1,108 @@
-CollabWrite – Real-Time Collaborative Writing Platform
+# CollabWrite - Real-time Collaborative Writing Platform
 
-Project Description:
-CollabWrite is a real-time collaborative writing platform designed to enable multiple users to write, edit, and review documents simultaneously. Inspired by platforms like Google Docs, CollabWrite integrates WebSocket-based live synchronization, user role management, and version control to streamline group editing and improve productivity.
+CollabWrite is a modern, real-time collaborative writing platform built with Next.js, Liveblocks, and TipTap. It provides a Google Docs-like experience with rich text editing, real-time collaboration, and modern UI components.
 
-Built with a user-friendly interface and powerful backend infrastructure, the platform supports rich-text formatting, document sharing via links, and secure login/logout functionalities. It is ideal for teams, students, educators, and professionals who require seamless collaboration on written content.
+## Features
 
-Tech Stack:
-Frontend: React.js, Tailwind CSS
+- ✍️ Real-time collaborative editing
+- 🎨 Rich text formatting with TipTap editor
+- 👥 Multiple user cursors and presence
+- 🔒 Authentication with Clerk
+- 🎯 Modern UI with Radix UI components
+- 🌙 Dark/Light mode support
+- 📱 Responsive design
+- 🎨 Customizable text styling
+- 📊 Table support
+- 📝 Task lists
+- 🔗 Link management
+- 🖼️ Image support
 
-Backend: Node.js, Express.js
+## Tech Stack
 
-Real-Time Communication: WebSocket (Socket.io)
-
-Database: MongoDB
-
-Authentication: JWT (JSON Web Tokens)
-
-Document Management: Quill.js for rich-text editing
-
-Deployment: Render / Vercel / Netlify (Frontend), Railway / Heroku (Backend)
-
-Key Features:
-🔁 Real-time multi-user document editing
-
-📝 Rich-text editor with formatting tools
-
-👥 User roles: editor, viewer, owner
-
-📜 Document history and version control
-
-🔒 Secure authentication & authorization
-
-🔗 Shareable document links with access control
-
-💬 In-document commenting (optional module)
-
-Use Cases:
-Academic collaborative projects
-
-Remote content writing teams
-
-Real-time note-taking during meetings
-
-Co-authoring research papers or articles
-
-
+- **Framework:** [Next.js 15](https://nextjs.org/)
+- **Real-time Collaboration:** [Liveblocks](https://liveblocks.io/)
+- **Rich Text Editor:** [TipTap](https://tiptap.dev/)
+- **Authentication:** [Clerk](https://clerk.com/)
+- **UI Components:** [Radix UI](https://www.radix-ui.com/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
+- **Database:** [Convex](https://www.convex.dev/)
+- **Form Handling:** [React Hook Form](https://react-hook-form.com/)
+- **Validation:** [Zod](https://zod.dev/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.x or later
+- npm, yarn, or pnpm
+- Liveblocks account and API key
+- Clerk account and API keys
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/collab-write.git
+cd collab-write
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Set up environment variables:
+Create a `.env.local` file in the root directory with the following variables:
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=your_liveblocks_public_key
+LIVEBLOCKS_SECRET_KEY=your_liveblocks_secret_key
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+collab-write/
+├── src/              # Source files
+├── public/           # Static assets
+├── convex/           # Convex database functions
+├── components/       # React components
+├── styles/          # Global styles
+└── app/             # Next.js app directory
+```
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [Liveblocks](https://liveblocks.io/) for real-time collaboration
+- [TipTap](https://tiptap.dev/) for the rich text editor
+- [Clerk](https://clerk.com/) for authentication
+- [Radix UI](https://www.radix-ui.com/) for accessible components
 
 ## Deploy on Vercel
 
